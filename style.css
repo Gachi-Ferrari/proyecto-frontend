@@ -9,8 +9,8 @@ h1 {
     font-size: 90px;
     color: turquoise;
     letter-spacing: 5px;
-    text-shadow: 5px 3px  3px rgb(76, 245, 76);
-    -webkit-text-stroke: rgb(8, 207, 108) 0.1px;
+    text-shadow: 8px 5px  10px turquoise;
+    -webkit-text-stroke: rgb(123, 129, 126) 0.1px;
 }
 
 .encabezado {
@@ -52,11 +52,7 @@ h1 {
     background-position: center;
 }
 
-h2 {
-    font-family: 'Exo 2', sans-serif;
-}
-
-h3 {
+h2, h3 {
     font-family: 'Exo 2', sans-serif;
 }
 
@@ -66,14 +62,43 @@ h3 {
 
 .pie {
     height: 150px;
-    display: flex;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: aqua;
+    font-size: large;
+    display: flex;
     align-items: center;
-    
+    justify-content: space-around;
 }
 
-p {
-    justify-content: space-around;
+.datos {
+    color:aqua;
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
+}
 
+i {
+    font-size: 25px;
+}
+
+@media (max-width: 880px) {
+    .caja {
+        grid-template-columns: 1fr 1fr;
+    }
+    .pie {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .caja {
+        grid-template-columns: 1fr;
+    }
+    .pie {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
